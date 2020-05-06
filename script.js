@@ -11,13 +11,12 @@ document.getElementById('searchBtn').addEventListener('click', (event) => {
       document.getElementById('weatherDisplay').innerHTML = `
       <h1>${city.name}</h1>
       <p>The current weather is ${JSON.stringify(city.weather[0].main)}</p>
-      <p>The current temperture is ${city.main.temp}° with a high of ${city.main.temp_max}° and a low of ${city.main.temp_min}°</p>
+      <p>The current temperture is ${Math.round(((city.main.temp-273.15)*1.8)+32)}°f with a high of ${Math.round(((city.main.temp_max-273.15)*1.8)+32)}°f and a low of ${Math.round(((city.main.temp_min-273.15)*1.8)+32)}°f.</p>
       `
     })
+    document.getElementById('cityName').value = ''
 })
-// Get Element of text box
 
-// Make user input populate in API call
 
 
 
