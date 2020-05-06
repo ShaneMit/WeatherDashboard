@@ -10,7 +10,8 @@ document.getElementById('searchBtn').addEventListener('click', (event) => {
       console.log(city)
       document.getElementById('weatherDisplay').innerHTML = `
       <h1>${city.name}</h1>
-      <p>The current weather is ${JSON.stringify(city.weather[0].main)}
+      <p>The current weather is ${JSON.stringify(city.weather[0].main)}</p>
+      <p>The current temperture is ${city.main.temp}° with a high of ${city.main.temp_max}° and a low of ${city.main.temp_min}°</p>
       `
     })
 })
